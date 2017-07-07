@@ -1,0 +1,12 @@
+{
+    "name": "digital/calculator",
+    "description": "This pacakge  will do the calculation",
+    "authors": [
+        {
+            "name": "Sumit Halgekar",
+            "email": "sumithalgekar@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

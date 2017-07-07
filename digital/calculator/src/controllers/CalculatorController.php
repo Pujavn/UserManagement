@@ -1,6 +1,6 @@
 <?php
 
-namespace User\Management\Controllers;
+namespace Digital\Calculator\Controllers;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -15,13 +15,13 @@ use App\Http\Controllers\Controller;
  *
  * @author Puja
  */
-class UserController extends Controller {
+class CalculatorController extends Controller {
 
 	/**
 	 * User index page
 	 */
 	public function index() {
-		echo 'Welcome to our User Management App';
+		echo 'Hello from the calculator package!';
 	}
 
 }
