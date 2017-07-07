@@ -9,6 +9,7 @@ namespace User\Management\Controllers;
  */
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 /**
  * Description of UserController
@@ -17,11 +18,28 @@ use App\Http\Controllers\Controller;
  */
 class UserController extends Controller {
 
-	/**
+    /**
 	 * User index page
 	 */
-	public function index() {
-		echo 'Welcome to our User Management App';
-	}
+	public function index()
+    {
+        $msg= 'Welcome to our User Management App nsbdsf';
+        return view('userIndex::welcomeUser', compact('msg'));
+    }
 
+    /**
+     * Shows a form for creating new user object
+     */
+    public function newAction()
+    {
+        return view('new::new');
+    }
+    /**
+     * Creates new user
+     */
+    public function createAction(Request $request)
+    {
+        var_dump($request);
+        echo $request->title;exit;
+    }
 }

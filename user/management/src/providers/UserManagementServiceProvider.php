@@ -13,7 +13,8 @@ class UserManagementServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->loadViewsFrom(__DIR__.'/../views/user', 'userIndex');
+        $this->loadViewsFrom(__DIR__.'/../views/user', 'new');
     }
 
     /**
