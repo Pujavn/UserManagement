@@ -5,6 +5,6 @@
  */
 
 Route::get('user/', 
-  'user\management\UserController@index');
+  'user\management\controllers\UserController@index');
 
 

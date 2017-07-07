@@ -1,6 +1,6 @@
 <?php
 
-namespace User\Management;
+namespace User\Management\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -24,7 +24,7 @@ class UserManagementServiceProvider extends ServiceProvider
     public function register()
     {
         //Register your package routes
-        include __DIR__.'/routes.php';
-        $this->app->make('User\Management\UserController');
+        include realpath(__DIR__ . '/../../config/routes.php');
+        $this->app->make('User\Management\Controllers\UserController');
     }
 }
