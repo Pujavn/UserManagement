@@ -12,7 +12,7 @@ class CalculatorServiceProvider extends ServiceProvider {
 	 * @return void
 	 */
 	public function boot() {
-
+		include realpath(__DIR__ . '/../../config/routes.php');
 	}
 
 	/**
@@ -21,8 +21,8 @@ class CalculatorServiceProvider extends ServiceProvider {
 	 * @return void
 	 */
 	public function register() {
-		include realpath(__DIR__ . '/../../config/routes.php');
 		$this->app->make('Digital\Calculator\Controllers\CalculatorController');
+		$this->loadViewsFrom(realpath(__DIR__ . '/../views'), 'calculator');
 	}
 
 }

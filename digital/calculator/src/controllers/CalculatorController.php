@@ -18,10 +18,18 @@ use App\Http\Controllers\Controller;
 class CalculatorController extends Controller {
 
 	/**
-	 * User index page
+	 * Addition of 2 numbers
 	 */
-	public function index() {
-		echo 'Hello from the calculator package!';
+	public function add($a, $b) {
+		$result = $a + $b;
+		return view('calculator:add', compact('result'));
+	}
+
+	/**
+	 * Subtraction of 2 numbers
+	 */
+	public function subtract($a, $b) {
+		echo $a - $b;
 	}
 
 }
